@@ -53,8 +53,7 @@
 
   DateDiff.prototype.years = function() {
     var eom, ret;
-    ret = (this.date1.getMonth() - this.date2.getMonth()) / 12;
-    ret %= 12;
+    ret = this.months() / 12;
     eom = this.endOfMonth(this.date2).getDate();
     ret += (this.date1.getDate() / eom) - (this.date2.getDate() / eom);
     return this._roundIt(ret);

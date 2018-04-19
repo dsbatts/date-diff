@@ -52,11 +52,7 @@
   };
 
   DateDiff.prototype.years = function() {
-    var eom, ret;
-    ret = this.months() / 12;
-    eom = this.endOfMonth(this.date2).getDate();
-    ret += (this.date1.getDate() / eom) - (this.date2.getDate() / eom);
-    return this._roundIt(ret);
+    return this.months() / 12;
   };
 
   DateDiff.prototype.endOfMonth = function(date) {
